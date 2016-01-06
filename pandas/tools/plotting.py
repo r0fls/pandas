@@ -3039,7 +3039,7 @@ def boxplot_frame_groupby(grouped, subplots=True, column=None, fontsize=None,
         ret = compat.OrderedDict()
         for (key, group), ax in zip(grouped, axes):
             d = group.boxplot(ax=ax, column=column, fontsize=fontsize,
-                              rot=rot, grid=grid, **kwds)
+                              rot=rot, grid=grid, figsize=figsize, **kwds)
             ax.set_title(com.pprint_thing(key))
             ret[key] = d
         fig.subplots_adjust(bottom=0.15, top=0.9, left=0.1, right=0.9, wspace=0.2)
